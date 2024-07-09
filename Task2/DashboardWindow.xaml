@@ -1,12 +1,62 @@
 ﻿<Window x:Class="Task2.DashboardWindow"
-        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
-        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
-        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-        xmlns:local="clr-namespace:Task2"
-        mc:Ignorable="d"
-        Title="DashboardWindow" Height="450" Width="800">
+		xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+		xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+		xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+		xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+		xmlns:local="clr-namespace:Task2"
+		mc:Ignorable="d"
+		
+		Title="DashboardWindow"
+		Height="500"
+		Width="700"
+        FontSize="25"
+        FontWeight="SemiBold"
+        >
+
     <Grid>
         
+        <!--
+            StackPanel for applying good design.
+        -->
+        <StackPanel VerticalAlignment="Center"
+					HorizontalAlignment="Center">
+
+            <!--
+				TextBox for writing search content. 
+				Button for applying search operation.
+            -->
+            <StackPanel Orientation="Horizontal">
+
+                <TextBox/>
+
+                <Button Content="Search"
+                        />
+
+            </StackPanel>
+
+            <!--
+				RadioButtons for select of search type.
+			-->
+            <StackPanel Orientation="Horizontal">
+
+                <RadioButton Content="Marka"/>
+
+                <RadioButton Content="Model"/>
+
+            </StackPanel>
+
+            <!--
+                ListView for showing all or searched cars.
+            -->
+            <StackPanel>
+
+                <ListView>
+                    
+                </ListView>
+
+            </StackPanel>
+
+        </StackPanel>
+
     </Grid>
 </Window>

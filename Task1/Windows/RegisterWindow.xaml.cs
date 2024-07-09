@@ -1,6 +1,7 @@
 ﻿using Microsoft.Extensions.Configuration;
 using System.Data.SqlClient;
 using System.Windows;
+using System.Windows.Input;
 
 namespace Task1.Windows;
 
@@ -56,5 +57,10 @@ public partial class RegisterWindow : Window
 	private void ExitButtonExecute(object sender, RoutedEventArgs e)
 	{
 		App.AppExit();
+	}
+
+	private void Window_MouseDown(object sender, MouseButtonEventArgs e)
+	{
+		App.MoveWindow(e, this);
 	}
 }

@@ -1,5 +1,6 @@
 ﻿using Microsoft.Extensions.Configuration;
 using System.Windows;
+using System.Windows.Input;
 using Task1.Windows;
 
 namespace Task1;
@@ -33,5 +34,13 @@ public partial class App : Application
 		RegisterWindow?.Close();
 
 		App.Current.Shutdown();
+	}
+
+	public static void MoveWindow(MouseButtonEventArgs eventArgs, Window currentWindow)
+	{
+		if (eventArgs.ChangedButton == MouseButton.Left)
+		{
+			currentWindow.DragMove();
+		}
 	}
 }

@@ -8,6 +8,10 @@ public partial class DashboardWindow : Window
 	public DashboardWindow()
 	{
 		InitializeComponent();
+		DataContext = this;
+
 		string connectionString = App._configuration!.GetConnectionString("DefaultConnection")!;
 	}
+
+
 }

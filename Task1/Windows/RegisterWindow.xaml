@@ -9,12 +9,14 @@
 		Title="RegisterWindow" 
 		Height="600" 
 		Width="700"
-		Background="Beige"
-		Foreground="DarkBlue"
+		Background="#D9EDBF"
+		Foreground="#131842"
 		FontSize="25"
         WindowStyle="None"
 		WindowStartupLocation="CenterScreen"
-		FontWeight="SemiBold">
+		FontWeight="SemiBold"
+        MouseDown="Window_MouseDown"
+        >
 
 	<Grid>
 
@@ -34,7 +36,7 @@
 				   HorizontalAlignment="Center"
 				   Margin="0 30 0 0"
 				   FontSize="42" 
-				   Foreground="Black"/>
+				   Foreground="#151515"/>
 
 		<StackPanel Orientation="Horizontal" 
 					HorizontalAlignment="Center" 
@@ -72,27 +74,35 @@
 						Margin="20 0 0 0">
 
 				<TextBox Margin="0 20 0 0"
-						 x:Name="NameTBox"/>
+						 x:Name="NameTBox"
+                         Background="#FFF5E0"/>
 
 				<TextBox Margin="0 20 0 0"
-						 x:Name="SurnameTBox"/>
+						 x:Name="SurnameTBox"
+                         Background="#FFF5E0"/>
 
 				<TextBox Margin="0 20 0 0"
-						 x:Name="AgeTBox"/>
+						 x:Name="AgeTBox"
+                         Background="#FFF5E0"/>
 
 				<TextBox Margin="0 20 0 0"
-						 x:Name="UsernameTBox"/>
+						 x:Name="UsernameTBox"
+                         Background="#FFF5E0"/>
 
 				<TextBox Margin="0 20 0 0"
-						 x:Name="PasswordTBox"/>
+						 x:Name="PasswordTBox"
+                         Background="#FFF5E0"/>
 
 				<TextBox Margin="0 20 0 0"
-						 x:Name="CPasswordTBox"/>
+						 x:Name="CPasswordTBox"
+                         Background="#FFF5E0"/>
 
 			</StackPanel>
 		</StackPanel>
 
 		<Button x:Name="FinishRegisterButton"
+                Background="#2B2A4C"
+                Foreground="#F4CE14"
 				Content="Finish Register"
 				Click="FinishRegisterButtonClickExecute"
 				Width="250" 
