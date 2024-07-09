@@ -14,14 +14,14 @@ public partial class RegisterWindow : Window
 
 	private void FinishRegisterButtonClickExecute(object sender, RoutedEventArgs e)
 	{
-		if(string.IsNullOrEmpty(NameTBox.Text) || string.IsNullOrEmpty(SurnameTBox.Text) 
+		if (string.IsNullOrEmpty(NameTBox.Text) || string.IsNullOrEmpty(SurnameTBox.Text)
 			|| string.IsNullOrEmpty(AgeTBox.Text) || string.IsNullOrEmpty(UsernameTBox.Text)
-			|| string.IsNullOrEmpty(PasswordTBox.Text) || string.IsNullOrEmpty(CPasswordTBox.Text)) 
+			|| string.IsNullOrEmpty(PasswordTBox.Text) || string.IsNullOrEmpty(CPasswordTBox.Text))
 		{
 			MessageBox.Show($"All lines must be filled !", "Message");
 			return;
 		}
-		
+
 		if (PasswordTBox.Text != CPasswordTBox.Text)
 		{
 			MessageBox.Show($"Enter correct confirm password !", "Message");
@@ -35,7 +35,7 @@ public partial class RegisterWindow : Window
 			SqlCommand? command = new();
 			sqlConnection.Open();
 
-			string? insertQuery =  $@"
+			string? insertQuery = $@"
 				INSERT INTO [MainUsers] 
 					([Name], [Surname], [Age], [Username], [Password])
 				VALUES 

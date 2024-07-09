@@ -1,5 +1,4 @@
 ﻿using Microsoft.Extensions.Configuration;
-using System.Configuration;
 using System.Windows;
 using Task1.Windows;
 
@@ -24,7 +23,7 @@ public partial class App : Application
 
 		RegisterWindow = new();
 		LoginWindow = new();
-		
+
 		LoginWindow.ShowDialog();
 	}
 

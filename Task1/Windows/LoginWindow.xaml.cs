@@ -26,14 +26,14 @@ public partial class LoginWindow : Window
 
 			connection.Open();
 			reader = cmd.ExecuteReader();
-		
+
 			while (reader.Read())
 			{
 				if (reader["Username"].ToString() == UsernameTBox.Text)
 				{
 					if (reader["Password"].ToString() == PasswordTBox.Text)
 					{
-						MessageBox.Show($"Welcome {reader["Name"]} {reader["Surname"]}.","Message"); 
+						MessageBox.Show($"Welcome {reader["Name"]} {reader["Surname"]}.", "Message");
 						return;
 					}
 				}

@@ -16,9 +16,9 @@ public class Car
 	public string? Marka { get => _marka; set => _marka = value; }
 	public string? Model { get => _model; set => _model = value; }
 
-    #endregion
+	#endregion
 
-    public Car() { }
+	public Car() { }
 
 	public Car(int id, string? marka, string? model)
 	{
