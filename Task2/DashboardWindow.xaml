@@ -27,10 +27,15 @@
             -->
             <StackPanel Orientation="Horizontal">
 
-                <TextBox/>
+                <TextBox Width="300"
+                         Margin="10"
+                         Name="SearchText"/>
 
                 <Button Content="Search"
-                        />
+                        Width="120"
+                        Margin="10"
+                        Name="SearchButton"
+                        Click="SearchButtonExecute"/>
 
             </StackPanel>
 
@@ -39,9 +44,12 @@
 			-->
             <StackPanel Orientation="Horizontal">
 
-                <RadioButton Content="Marka"/>
+                <RadioButton Content="Marka"
+                             IsChecked="True"
+                             Name="RadioBtnMarka"/>
 
-                <RadioButton Content="Model"/>
+                <RadioButton Content="Model"
+                             Name="RadioBtnModel"/>
 
             </StackPanel>
 
@@ -50,8 +58,23 @@
             -->
             <StackPanel>
 
-                <ListView>
+                <ListView Name="ListOfCars" 
+                          Margin="10">
                     
+                    <!-- Define the item template -->
+                    <ListView.ItemTemplate>
+                        
+                        <DataTemplate>
+                            
+                            <StackPanel>
+                                
+                                <TextBlock Text="{Binding Marka}" 
+                                           FontWeight="Bold"/>
+                                <TextBlock Text="{Binding Model}"/>
+                                
+                            </StackPanel>
+                        </DataTemplate>
+                    </ListView.ItemTemplate>
                 </ListView>
 
             </StackPanel>

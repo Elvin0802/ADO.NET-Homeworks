@@ -7,6 +7,8 @@ namespace Task1.Windows;
 
 public partial class LoginWindow : Window
 {
+	public static string connectionString = App._configuration!.GetConnectionString("DefaultConnection")!;
+	public SqlConnection connection = new SqlConnection(connectionString);
 	public LoginWindow()
 	{
 		InitializeComponent();
@@ -17,11 +19,15 @@ public partial class LoginWindow : Window
 	{
 		SqlDataReader? reader = null;
 		SqlCommand? cmd = null;
-		string connectionString = App._configuration!.GetConnectionString("DefaultConnection")!;
 
-		using (SqlConnection connection = new SqlConnection(connectionString))
+
+		using (connection)
 		{
-			var querry = @"SELECT * FROM MainUsers";
+			var querry = @"
+							USE [AppUsers];
+
+							SELECT * FROM [MainUsers];
+						";
 
 			cmd = new(querry, connection);
 

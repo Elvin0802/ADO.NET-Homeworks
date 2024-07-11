@@ -37,10 +37,12 @@ public partial class RegisterWindow : Window
 			sqlConnection.Open();
 
 			string? insertQuery = $@"
+				USE [AppUsers];
+
 				INSERT INTO [MainUsers] 
 					([Name], [Surname], [Age], [Username], [Password])
 				VALUES 
-					('{NameTBox.Text}', '{SurnameTBox.Text}', {AgeTBox.Text}, '{UsernameTBox.Text}','{PasswordTBox.Text}')";
+					('{NameTBox.Text}', '{SurnameTBox.Text}', {AgeTBox.Text}, '{UsernameTBox.Text}','{PasswordTBox.Text}');";
 
 			command.Connection = sqlConnection;
 			command.CommandText = insertQuery;
